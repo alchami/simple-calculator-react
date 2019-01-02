@@ -7,6 +7,9 @@
   "author": "alchami@riseup.net",
   "license": "MIT",
   "eslint.packageManager": "yarn",
+  "scripts": {
+    "build": "node_modules/.bin/webpack"
+  },
   "dependencies": {
     "prop-types": "^15.6.2",
     "react": "^16.7.0",
