@@ -12,9 +12,7 @@ class ButtonsContainer extends Component {
 
         for (let i = 0; i < 10; i++) {
             buttons.push(
-                <div id="calculator-buttons">
                  <Button label={i} command={command}/>
-                </div>
             ) 
         }
 
@@ -24,7 +22,12 @@ class ButtonsContainer extends Component {
     render() {
         const test = (label) => console.log(label, " pressed!");
         return(
-            this.createButtons(test)
+            <React.Fragment>
+            {this.createButtons(test)}
+             <Button label="+" command={test} />
+             <Button label="-" command={test} />
+             <Button label="CE" command={test} />
+            </React.Fragment>
         )
     }
 }
