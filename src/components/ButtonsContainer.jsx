@@ -12,7 +12,7 @@ class ButtonsContainer extends Component {
 
         for (let i = 0; i < 10; i++) {
             buttons.push(
-                 <Button label={i} command={command}/>
+                 <Button key={i.toString()} label={i.toString()} command={command}/>
             ) 
         }
 
