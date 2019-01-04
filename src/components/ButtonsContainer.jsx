@@ -6,13 +6,25 @@ class ButtonsContainer extends Component {
     constructor() {
         super();
     }
+    
+    createButtons (command) {
+        let buttons = []
+
+        for (let i = 0; i < 10; i++) {
+            buttons.push(
+                <div id="calculator-buttons">
+                 <Button label={i} command={command}/>
+                </div>
+            ) 
+        }
+
+        return buttons;
+    } 
 
     render() {
         const test = (label) => console.log(label, " pressed!");
         return(
-            <div id="calculator-buttons">
-                <Button label="0" command={test}/>
-            </div>
+            this.createButtons(test)
         )
     }
 }
