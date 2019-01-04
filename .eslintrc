@@ -12,6 +12,10 @@
         "plugin:react/recommended"
     ],
 
+    "rules": {
+        "no-console": "off"
+    },
+
     "env": {
         "browser": true,
         "node": true
