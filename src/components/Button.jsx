@@ -7,12 +7,12 @@ import PropTypes from "prop-types";
         const label   = this.props.label;
         const command = this.props.command;
 
-        return(<button id={label} className="btn btn-dark" onClick={command}>{label}</button>)
+        return(<button id={label} className="btn btn-dark" onClick={() => command(label)}>{label}</button>)
     }
 }*/
 
 const Button = ({label, command}) => (
-    <button id={label} className="btn btn-dark" onClick={command}>{label}</button>
+    <button id={label} className="btn btn-dark" onClick={() => command(label)}>{label}</button>
 );
 Button.propTypes = {
     label: PropTypes.string.isRequired,

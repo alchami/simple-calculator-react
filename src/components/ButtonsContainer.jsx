@@ -8,7 +8,7 @@ class ButtonsContainer extends Component {
     }
 
     render() {
-        const test = () => console.log("pressed!");
+        const test = (label) => console.log(label, " pressed!");
         return(
             <div id="calculator-buttons">
                 <Button label="0" command={test}/>
